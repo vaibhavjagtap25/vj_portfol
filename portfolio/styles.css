@@ -1,0 +1,274 @@
+/* styles.css */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins','san-serif';
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0a192f;
+    color: #ccd6f6;
+}
+
+header {
+    background: #020c1b;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    position: fixed;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 10px;
+
+
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    display: none;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.navbar li a:hover{
+ background: #52d4b8;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 60px; /* To offset the fixed header */
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.profile-img {
+    border: 8px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #64ffda, #0a192f);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.social-icons a {
+    color: #ccd6f6;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #64ffda;
+}
+.foot{
+text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: #020c1b;
+    background: #64ffda;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #52d4b8;
+}
+#about {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.skill-child{
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 1px solid white;
+
+}
+.skill-div{
+    text-align: center;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.pro-bar {
+    background-color: #d9a7c7;
+    height: 10px;
+    width: 30vw;
+    border-radius: 5px;
+    margin-left: 30%;
+  }
+  .pro-bar div {
+    height: 10px;
+    border-radius: 5px;
+
+    background-color: #f2c94c;
+  }
+
+  .pro-bar .html {
+    width: 0%;
+    animation: html 1s linear forwards;
+  }
+  .pro-bar .css {
+    width: 0%;
+    animation: css 1s linear forwards;
+  }
+  .pro-bar .js {
+    width: 0%;
+    animation: js 1s linear forwards;
+  }
+  .pro-bar .rjs {
+    width: 0%;
+    animation: rjs 1s linear forwards;
+  }
+  @keyframes html {
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes css {
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes js {
+    100% {
+      width: 75%;
+    }
+  }
+  @keyframes rjs {
+    100% {
+      width: 80%;
+    }
+  }
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+#projects {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project a {
+  display: block;
+  margin-top: 10px;
+}
+
+#contact {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form label {
+  margin-bottom: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

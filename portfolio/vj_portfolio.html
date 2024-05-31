@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="" class="logo">Portfolio</a>
+        <nav>
+            <button id="nav-toggle" aria-label="Toggle Navigation">Menu</button>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="intro-section">
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Hello, It's Me<br>Vaibhav Jagtap</h1>
+                <p>And I'm a <span class="typing"></span></p>
+                <p>I'm a Fullstack Developer. My expertise is to create and design websites, frontend design, </p>
+                <div class="social-icons">
+                    <a href="https://api.whatsapp.com/message/VTIOSRUS7ODDJ1?autoload=1&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/vaibhav_jagtap2509/?next=%2F&hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vaibhav-jagtap-b91265227/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="./vaibhav_resume (2).pdf" class="btn">Resume</a>
+            
+            </div>
+            <div class="profile-img">
+                <img src="resume_photo.JPG" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="about">
+        <h2>About Me</h2>
+        <hr>
+        <div class="about-content">
+            <p style="font-size: 20px;">Hello! I am Vaibhav Jagtap, a passionate and driven Master of Computer Applications (MCA) student at IBMRD in university Sppu. With a strong foundation in computer science and a keen interest in emerging technologies, I am dedicated to solving complex problems and creating innovative solutions that make a real-world impact.
+
+                Throughout my academic journey, I have developed a diverse skill set that spans programming, software development, web development. My coursework and projects have equipped me with hands-on experience in languages such as  Python, and  as well as proficiency in frameworks and tools like  Django.</p>
+        </div>
+    </section>
+    <hr>
+    <!-- Add more sections as needed -->
+    <section id="skills" class="skill-div">
+        <div class="skill-child">
+            <h3 >Skill</h3>
+        </div>
+        <hr>
+            <div class="skill-div">
+
+                <h3>HTML</h3>
+                <div class="pro-bar">
+                    <div class="html">85%</div>
+                </div><br>
+                <h3>CSS</h3>
+                <div class="pro-bar">
+                    <div class="css">70%</div>
+                </div>
+                <br>
+
+                <h3>JavaScript</h3>
+                <div class="pro-bar">
+                    <div class="js">75%</div>
+                </div>
+                <br>
+
+
+                <h3>Python & Django</h3>
+                <div class="pro-bar">
+                    <div class="rjs">80%</div>
+                </div>
+       
+    </section>
+<br><br>
+<br><hr>
+<section id="projects">
+    <h2>Projects</h2>
+    <hr>
+    <div class="project">
+        <h3>Project Title</h3>
+        <h5>Online Cake Shop And Eccomerce websites</h5>
+        <p>online cake shop is use technologies html css javascripts django </p>
+        <p>Ecommerce Website use technologies angular</p>
+        <a href="project.mp4">Live Demo</a>
+        <a href="https://github.com/vaibhavjagtap25">GitHub Repository</a>
+    </div>
+</section>
+<hr>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <hr>
+    <form id="contact-form" action="https://formspree.io/f/mwkgdeyr" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+    <footer class="foot">
+        <p>&copy; 2024 Vaibhav Jagtap. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const nav = document.querySelector('nav ul');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+
+        // Typing effect
+        const typingElement = document.querySelector('.typing');
+        const textArray = ["Frontend Developer", "Web Designer", "Fullsatck Developer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingSpeed = 100;
+        const erasingSpeed = 50;
+        const newTextDelay = 2000;
+
+        function type() {
+            if (charIndex < textArray[textIndex].length) {
+                typingElement.textContent += textArray[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingSpeed);
+            } else {
+                textIndex++;
+                if (textIndex >= textArray.length) textIndex = 0;
+                setTimeout(type, typingSpeed + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(type, newTextDelay + 250);
+        });
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+
+    </script>
+</body>
+</html>
